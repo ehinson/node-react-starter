@@ -47,7 +47,7 @@ export const updateTest = (req, res) => {
 }
 
 export const deleteTest = (req, res) => {
-    Test.remove({ _id: req.params.testID }, (err, Test) => {
+    Test.deleteOne({ _id: req.params.testID }, (err, Test) => {
         if (err) {
             res.send(err);
         }
